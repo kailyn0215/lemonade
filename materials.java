@@ -23,6 +23,7 @@ public class materials
         System.out.print("How many cups of sugar would you like to buy? ($0.08 each)\n\n");
         numSugar = num.nextInt();
         money = money - ((priceCups * numCups) + (priceIce * numIce) + (priceLemons * numLemons) + (priceSugar * numSugar));
+        count = count++;
     } 
 }
 
