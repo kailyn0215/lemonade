@@ -3,13 +3,22 @@ import java.util.Scanner;
 public class materials
 {
     public double cupPrice = 0.03;
-    public int cups;
+    public int numCups;
+    public int numIce;
+    public int numLemons;
+    public int numSugar;
+    public double money;
     public void shopping(String yes)
     {
-        System.out.print("How many cups would you like to buy? ($0.03 Each)\n\n");
+        System.out.print("How many cups would you like to buy? ($0.03 each)\n\n");
         Scanner num = new Scanner(System.in);
-        cups = num.nextInt();
-        System.out.print("How much ice would you like to buy?\n- 25 for $0.90\n- 50 for $1.70\n- 100 for $2.76\n\n");
+        numCups = num.nextInt();
+        System.out.print("How much ice would you like to buy? ($0.01 each)\n\n");
+        numIce = num.nextInt();
+        System.out.print("How many lemons would you like to buy? ($0.08 each)\n\n");
+        numLemons = num.nextInt();
+        System.out.print("How many cups of sugar would you like to buy? ($0.08 each)\n\n");
+        numSugar = num.nextInt();
     } 
 }
 
