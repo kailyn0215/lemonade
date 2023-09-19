@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class materials
 {
-    public double cupPrice = 0.03;
+    public double priceCups = 0.03;
+    public double priceIce = 0.01;
+    public double priceLemons = 0.08;
+    public double priceSugar = 0.08;
     public int numCups;
     public int numIce;
     public int numLemons;
@@ -19,6 +22,7 @@ public class materials
         numLemons = num.nextInt();
         System.out.print("How many cups of sugar would you like to buy? ($0.08 each)\n\n");
         numSugar = num.nextInt();
+        money = money - ((priceCups * numCups) + (priceIce * numIce) + (priceLemons * numLemons) + (priceSugar * numSugar));
     } 
 }
 
