@@ -7,8 +7,8 @@ public class materials
     public int numIce;
     public int numLemons;
     public int numSugar;
-    public double money;
-    public void shopping(String yes)
+    //public double money;
+    public void shopping(double money)
     {
         System.out.print("How many cups would you like to buy? ($0.03 each)\n\n");
         Scanner num = new Scanner(System.in);
