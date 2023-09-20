@@ -1,19 +1,20 @@
+import java.util.Scanner;
+
 public class lemonade 
 {
-    public int days;
-    public int count;
+    
     public static void main(String[] args)
     {
-        System.out.println("How many days would you like to play?");
+        int days;
+        int count;
+
+        System.out.print("How many days would you like to play? ");
         Scanner day = new Scanner(System.in);
         days = day.nextInt();
         count = 1;
         materials start = new materials();
-        while (count == 1)
-            {
-                start.shopping(20);
-            }
-        
+        start.shopping(20);
+        count = count++;
         
     }   
 }
