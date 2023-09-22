@@ -14,7 +14,11 @@ public class lemonade
         count = 1;
         materials start = new materials();
         start.shopping(20);
-        count = count++;
-        
+        count++;
+        while(count < days)
+        {
+            start.shopping();
+            count++;
+        }
     }   
 }
