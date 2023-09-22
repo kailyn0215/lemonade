@@ -12,11 +12,13 @@ public class lemonade
         Scanner day = new Scanner(System.in);
         days = day.nextInt();
         count = 1;
-        materials start = new materials();
-        start.shopping(20);
+        materials start = new materials(20, 1); //start with $20 on day 1
+        factors yay = new factors();
+        start.shopping();
         count++;
-        while(count < days)
+        while(count <= days)
         {
+            yay.temp();
             start.shopping();
             count++;
         }

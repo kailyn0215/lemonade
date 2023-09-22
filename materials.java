@@ -10,10 +10,23 @@ public class materials
     public int numIce;
     public int numLemons;
     public int numSugar;
-    //public double money;
-    public void shopping(double money)
+    public double mon;
+    public int cou;
+
+    public int perLemons = 0;
+    public int perSugar = 0;
+    public int perIce = 0;
+
+    public materials(double money, int count)
     {
-        System.out.println("Welcome to the materials shop! Today you start with $" + money + ". Please use it wisely!");
+        mon = money;
+        cou = count;
+    }
+
+    public void shopping()
+    {
+        if(count == 1)
+        System.out.println("Welcome to the materials shop! Today you start with $" + mon + ". Please use it wisely!");
         System.out.print("How many cups would you like to buy? ($0.03 each)\n\n");
         Scanner num = new Scanner(System.in);
         numCups = num.nextInt();
@@ -23,16 +36,33 @@ public class materials
         numLemons = num.nextInt();
         System.out.print("How many cups of sugar would you like to buy? ($0.08 each)\n\n");
         numSugar = num.nextInt();
-        money = money - ((priceCups * numCups) + (priceIce * numIce) + (priceLemons * numLemons) + (priceSugar * numSugar));
+        mon = mon - ((priceCups * numCups) + (priceIce * numIce) + (priceLemons * numLemons) + (priceSugar * numSugar));
     } 
 
-    public void mix
+    public void mix()
     {
         System.out.println("Let's get started with making your perfect recipe!\nYou currently have " + numCups + " cups, " + numIce + " ice, " + numLemons + " lemons, and " + numSugar + " cups of sugar.");
         Scanner blend = new Scanner(System.in);
-        do while(perLemons > numLemons)
+
+        do // lemons
         {
-            System.out.print("How many lemons would you like to use per pitcher?");
+            System.out.print("How many lemons would you like to use per pitcher? (Current: " + perLemons + " lemon(s) per pitcher) ");
+            perLemons = blend.nextInt();
         }
+        while(perLemons > numLemons);
+
+        do // sugar
+        {
+            System.out.print("How many cups of sugar would you like to use per pitcher? (Current: " + perSugar + " cup(s) of sugar per pitcher) ");
+            perSugar = blend.nextInt();
+        }
+        while(perSugar > numSugar);
+
+        do // ice
+        {
+            System.out.print("How many ice cubes would you like to use per glass? (Current: " + perIce + " cup(s) of sugar per pitcher) ");
+            perIce = blend.nextInt();
+        }
+        while(perIce > numIce);
     }
 }
