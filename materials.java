@@ -25,4 +25,14 @@ public class materials
         numSugar = num.nextInt();
         money = money - ((priceCups * numCups) + (priceIce * numIce) + (priceLemons * numLemons) + (priceSugar * numSugar));
     } 
+
+    public void mix
+    {
+        System.out.println("Let's get started with making your perfect recipe!\nYou currently have " + numCups + " cups, " + numIce + " ice, " + numLemons + " lemons, and " + numSugar + " cups of sugar.");
+        Scanner blend = new Scanner(System.in);
+        do while(perLemons > numLemons)
+        {
+            System.out.print("How many lemons would you like to use per pitcher?");
+        }
+    }
 }
