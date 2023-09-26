@@ -1,11 +1,11 @@
 public class factors
 {
     private double tempurature;
-    public int cust;
+    int cust;
 
     public void popularity()
     {
-
+        
     }
 
     public void temp()
