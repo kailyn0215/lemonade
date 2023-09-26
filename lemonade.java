@@ -13,12 +13,10 @@ public class lemonade
         days = day.nextInt();
         count = 1;
         materials start = new materials(20, 1); //start with $20 on day 1
-        factors yay = new factors();
-        start.shopping();
-        count++;
+        factors factor = new factors();
         while(count <= days)
         {
-            yay.temp();
+            factor.temp();
             start.shopping();
             count++;
         }

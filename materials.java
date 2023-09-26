@@ -25,16 +25,16 @@ public class materials
 
     public void shopping()
     {
-        if(count == 1)
+        if(cou == 1)
         System.out.println("Welcome to the materials shop! Today you start with $" + mon + ". Please use it wisely!");
-        System.out.print("How many cups would you like to buy? ($0.03 each)\n\n");
+        System.out.print("How many cups would you like to buy? ($0.03 each)\n");
         Scanner num = new Scanner(System.in);
         numCups = num.nextInt();
-        System.out.print("How much ice would you like to buy? ($0.01 each)\n\n");
+        System.out.print("How much ice would you like to buy? ($0.01 each)\n");
         numIce = num.nextInt();
-        System.out.print("How many lemons would you like to buy? ($0.08 each)\n\n");
+        System.out.print("How many lemons would you like to buy? ($0.08 each)\n");
         numLemons = num.nextInt();
-        System.out.print("How many cups of sugar would you like to buy? ($0.08 each)\n\n");
+        System.out.print("How many cups of sugar would you like to buy? ($0.08 each)\n");
         numSugar = num.nextInt();
         mon = mon - ((priceCups * numCups) + (priceIce * numIce) + (priceLemons * numLemons) + (priceSugar * numSugar));
     } 

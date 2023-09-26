@@ -1,6 +1,7 @@
 public class factors
 {
-    public double tempurature;
+    private double tempurature;
+    public int cust;
 
     public void popularity()
     {
@@ -10,6 +11,8 @@ public class factors
     public void temp()
     {
         tempurature = 100 * java.lang.Math.random();
-        System.out.println("Today it is " + tempurature + "°F.");
+        System.out.print("Today it is ");
+        System.out.printf("%.2f", tempurature);
+        System.out.println("° F.");
     }
 }
